@@ -18,6 +18,19 @@
 1. L 转 E: 已知 $\boldsymbol{r}(a,b,c,t)$, 速度函数为 $\displaystyle\frac{\partial \boldsymbol{r}}{\partial t}$, 反解出三个拉格朗日坐标关于 r 的函数再带入 v 的方程即得欧拉变数中的速度方程.
 2. E 转 L: 已知速度函数 $\boldsymbol{v}(\boldsymbol{r},t)=\displaystyle\frac{d\boldsymbol{r}}{dt}$, 构成 r 关于 t 的常微分方程组, 其解为 $\boldsymbol{r}(C_1,C_2,C_3,t)$, 由初始时刻 $\boldsymbol{r}=\boldsymbol{r}_0$ 确定, $\boldsymbol{r}_0$ 的三个坐标就是三个拉格朗日变数.
 
+速度变化即加速度的来源主要是两个方面: 场的非定常性和非均匀性, 将速度对时间的全导数 (随体导数) 分为局部导数和位变导数两个部分.
+$$
+\frac{d\boldsymbol{v}}{dt}=\frac{\partial \boldsymbol{v}}{\partial t}+v\frac{\partial \boldsymbol{v}}{\partial s}=\frac{\partial \boldsymbol{v}}{\partial t}+(\boldsymbol{v}\cdot\nabla)\boldsymbol{v}
+$$
+
+随体导数的分解对于任意矢量或标量都成立:
+$$
+\frac{d\boldsymbol{a}}{dt}=\frac{\partial \boldsymbol{a}}{\partial t}+(\boldsymbol{v}\cdot\nabla)\boldsymbol{a}\\
+\frac{d\phi}{dt}=\frac{\partial \phi}{\partial t}+\boldsymbol{v}\cdot\nabla\phi
+$$
+
+不可压缩流体的数学表示: $\displaystyle\frac{d\rho}{dt}=0$, 表示流体元密度的随体导数不变. 如果流体不可压缩而且匀质, 那么还有 $\nabla\rho=0$, 从而 $\displaystyle\frac{\partial \rho}{\partial t}=0$, 从而 $\rho=\mathrm{Const}$.
+
 ## <font color='red'>$\S 2$  </font>轨迹和流线
 
 要用速度分布函数得到轨迹线, 需要先转到拉格朗日表示, 积分后消去 t.
@@ -55,6 +68,7 @@ S=\begin{vmatrix}
 \end{vmatrix}
 $$
 S 称为变形速度张量或应变率张量, 其对角元的物理意义是坐标轴上线段元的相对拉伸 (压缩) 速度, 非对角元对应着两两坐标轴之间剪切角速度的负值.
+变形速度张量可以对角化写成标准形式 $diag(\epsilon'_1,\epsilon'_2\epsilon'_3)$, 对角元称为主相对拉伸速度, 恒有三个互相垂直的主轴, 在主轴上的质点线段元以主相对拉伸速度变形, 变形后仍在主轴方向.
 
 反对称部分对应着矢量 $\boldsymbol{\omega}=\frac{1}{2}\nabla\times\boldsymbol{v}$
 
