@@ -70,6 +70,15 @@ $$
 S 称为变形速度张量或应变率张量, 其对角元的物理意义是坐标轴上线段元的相对拉伸 (压缩) 速度, 非对角元对应着两两坐标轴之间剪切角速度的负值.
 变形速度张量可以对角化写成标准形式 $diag(\epsilon'_1,\epsilon'_2\epsilon'_3)$, 对角元称为主相对拉伸速度, 恒有三个互相垂直的主轴, 在主轴上的质点线段元以主相对拉伸速度变形, 变形后仍在主轴方向.
 
+变形速度张量的第一基本不变量等于速度的散度, 等于体积元的变化率 (相对体积膨胀率): $I_1=\nabla\cdot\boldsymbol{v}=\frac{1}{\delta V}\frac{d}{dt}\delta V$
+$$
+\begin{cases}
+    I_1=\epsilon_1+\epsilon_2+\epsilon_3\\
+    I_2=\epsilon_2\epsilon_3+\epsilon_1\epsilon_3+\epsilon_2\epsilon_1-\frac{1}{4}(\theta_1^2+\theta_2^2+\theta_3^2)\\
+    I_3=\epsilon_1\epsilon_2\epsilon_3+\frac{1}{4}\theta_1\theta_2\theta_3-\frac{1}{4}(\theta_1^2\epsilon_1+\theta_2^2\epsilon_2+\theta_3^2\epsilon_3)\\
+\end{cases}
+$$
+
 反对称部分对应着矢量 $\boldsymbol{\omega}=\frac{1}{2}\nabla\times\boldsymbol{v}$
 
 **亥姆霍兹速度分解定理:**
@@ -77,3 +86,11 @@ $$
 \boldsymbol{v}=\boldsymbol{v}_0+\frac{1}{2}\mathrm{rot}\boldsymbol{v}\times\delta \boldsymbol{r}+S\cdot\delta \boldsymbol{r}=\boldsymbol{v}_0+\frac{1}{2}\mathrm{rot}\boldsymbol{v}\times\delta \boldsymbol{r}+\mathrm{grad}\phi\\
 \phi=\frac{1}{2}(\epsilon_1\delta x^2+\epsilon_2\delta y^2+\epsilon_3\delta z^2+\theta_1\delta y\delta z+\theta_2\delta x\delta z+\theta_3\delta y\delta x)
 $$
+
+---
+如果 $\nabla\cdot\boldsymbol{v}\ne0$, 则一般变形运动可以视为均匀膨胀 $\displaystyle\frac{1}{3}\frac{\partial v_i}{\partial x_i}\delta_{kl}$ 和无体积变化部分 $s_{kl}-\displaystyle\frac{1}{3}\frac{\partial v_i}{\partial x_i}\delta_{kl}$ 之和
+
+任一平面变形运动可以分解为一个均匀膨胀, 一个均匀剪切和一个旋转运动. 证明: 在主轴坐标系变形运动写为标准形式, $\phi$ 的平方项组合为 $\delta\boldsymbol{r}'^2$ 和 $\delta x'^2-\delta y'^2$, 前一项为均匀膨胀, 后一项再转 45度, 得到 $\delta x''\delta y''$, 是一个旋转加一个剪切.
+任一三维变形运动可以分解为一个均匀膨胀, 两个均匀剪切和一个旋转运动.
+
+## <font color='red'>$\S 4$  </font>涡旋运动
