@@ -118,4 +118,28 @@ $$
 在流体中取一个体积元, 当体积元趋于零时质量力比面力无穷小阶数高, 可以忽略. 此时作用在体积元上的应力可以用二阶张量表示. 利用应力在表面的合力矩为零可以证明这个张量是对称的. 应力张量可以对角化, 在主轴坐标系中的三个对角元称为法向主应力, 在与主轴垂直的面上只有法向应力.
 
 ---
-理想流体或静止的流体不能承受切向变形, 所以切向应力为零, 应力张量自然成一个对角形, 
+理想流体或静止的流体不能承受切向变形, 所以切向应力为零, 应力张量自然成一个对角形.
+可以用两种方式证明此时应力张量不同方向上的法向分量是相等的:
+1. 根据 $p_n=p_x\alpha+p_b\beta+p_c\gamma$ 和切向分量 $p_{ij}=0$, $p_{nx}=p_{xx}\alpha$, 根据 nx 方向的对称性, $p_{nx}=p_{nn}\alpha$, 从而 $p_{xx}=p_{yy}=p_{zz}=p_{nn}=-p$.
+2. 取一个三棱锥流体微元, 在三个侧面应用矢量三角形法则可以得出压力与面积成正比, 所以应力在任何方向都是一个常数.
+所以此时应力是二阶各向同性张量, 可以用一个标量函数压强来表示.
+
+## <font color='red'>$\S 6$  </font>物质积分的随体导数
+
+线段元, 面积元和体积元的随体导数:
+$$
+\begin{cases}
+\displaystyle\frac{d}{dt}\delta\boldsymbol{r}=\delta\boldsymbol{v}=\delta\boldsymbol{r}\cdot\nabla\boldsymbol{v}\\
+\displaystyle\frac{d}{dt}\delta\tau=\nabla\cdot\boldsymbol{v}~\delta\tau\\
+\displaystyle\frac{d}{dt}\delta S_i=\delta S_i\frac{\partial v_j}{\partial x_j}-\delta S_j\frac{\partial v_j}{\partial x_i}\\
+\end{cases}
+$$
+线积分, 面积分和体积分的随体导数:
+$$
+\begin{cases}
+\displaystyle\frac{d}{dt}\oint_L\boldsymbol{v}\cdot\delta\boldsymbol{r}=\oint_L\frac{d\boldsymbol{v}}{dt}\cdot\delta\boldsymbol{r}\\
+\displaystyle\frac{d}{dt}\int_S\boldsymbol{\Omega}\cdot d\boldsymbol{S}=\int_S(\frac{d\boldsymbol{\Omega}}{dt}+\boldsymbol{\Omega}~\nabla\cdot\boldsymbol{v}-(\boldsymbol{\Omega}\cdot\nabla)\boldsymbol{v})\cdot\delta S\\
+\displaystyle\frac{d}{dt}\int_{\tau}\phi \delta\tau=\int_{\tau}\frac{\partial \phi}{\partial t} \delta\tau+\int_{S}\phi~\boldsymbol{v}\cdot\delta\boldsymbol{S}\\
+\displaystyle\frac{d}{dt}\int_{\tau}\boldsymbol{a} \delta\tau=\int_{\tau}\frac{\partial \boldsymbol{v}}{\partial t} \delta\tau+\int_{S}\boldsymbol{v}~\boldsymbol{v}\cdot\delta\boldsymbol{S}\\
+\end{cases}
+$$
