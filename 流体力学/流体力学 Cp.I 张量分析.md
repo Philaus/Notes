@@ -1,5 +1,60 @@
 # Cp.I 张量分析
 
+## 场论基本运算公式
+
+$$
+\begin{aligned}
+
+& \text { 微分公式 } \\
+& \operatorname{grad}(\varphi+\psi)=\operatorname{grad} \varphi+\operatorname{grad} \psi \\
+& \operatorname{grad}(\varphi \psi)=\varphi \operatorname{grad} \psi+\psi \operatorname{grad} \varphi \\
+& \operatorname{grad} F(\varphi)=F^{\prime}(\varphi) \operatorname{grad} \varphi, \operatorname{grad} \varphi(r)=\varphi^{\prime}(r) \frac{r}{r} \\
+& \operatorname{div}(\boldsymbol{a}+\boldsymbol{b})=\operatorname{div} \boldsymbol{a}+\operatorname{div} \boldsymbol{b} \\
+& \operatorname{div}(\varphi \boldsymbol{a})=\varphi \operatorname{div} \boldsymbol{a}+\operatorname{grad} \varphi \cdot \boldsymbol{a} . \\
+& \operatorname{div}(\boldsymbol{a} \times \boldsymbol{b})=\boldsymbol{b} \cdot \operatorname{rot} \boldsymbol{a}-\boldsymbol{a} \cdot \operatorname{rot} \boldsymbol{b} . \\
+& \operatorname{rot}(\boldsymbol{a}+\boldsymbol{b})=\operatorname{rot} \boldsymbol{a}+\operatorname{rot} \boldsymbol{b} \\
+& \operatorname{rot}(\varphi \boldsymbol{a})=\varphi \operatorname{rot} \boldsymbol{a}+\operatorname{grad} \varphi \times \boldsymbol{a} . \\
+& \operatorname{rot}(\boldsymbol{a} \times \boldsymbol{b})=(\boldsymbol{b} \cdot \nabla) \boldsymbol{a}-(\boldsymbol{a} \cdot \nabla) \boldsymbol{b}+\boldsymbol{a} \operatorname{div} \boldsymbol{b}-\boldsymbol{b} \operatorname{div} \boldsymbol{a} . \\
+& \operatorname{grad}(\boldsymbol{a} \cdot \boldsymbol{b})=(\boldsymbol{b} \cdot \nabla) \boldsymbol{a}+(\boldsymbol{a} \cdot \nabla) \boldsymbol{b}+\boldsymbol{b} \times \operatorname{rot} \boldsymbol{a}+\boldsymbol{a} \times \operatorname{rot} \boldsymbol{b} . \\
+& \operatorname{grad} \frac{\boldsymbol{a}^2}{2}=(\boldsymbol{a} \cdot \nabla) \boldsymbol{a}+\boldsymbol{a} \times \operatorname{rot} \boldsymbol{a}, \\
+& \operatorname{或}(\boldsymbol{a} \cdot \nabla) \boldsymbol{a}=\operatorname{grad} \frac{a^2}{2}-\boldsymbol{a} \times \operatorname{rot} \boldsymbol{a} . \\
+& \operatorname{div} \operatorname{grad} \varphi=\Delta \varphi .\\
+& \text { div } \operatorname{rot} \boldsymbol{a}=0 . \\
+& \operatorname{rot} \operatorname{grad} \varphi=\mathbf{0} . \\
+& \operatorname{rot} \operatorname{rot} \boldsymbol{a}=\operatorname{grad} \operatorname{div} \boldsymbol{a}-\Delta \boldsymbol{a} . \\
+& \operatorname{div}(\varphi \operatorname{grad} \psi)=\varphi \Delta \psi+\operatorname{grad} \varphi \cdot \operatorname{grad} \psi . \\
+& \Delta(\varphi \psi)=\psi \Delta \varphi+\varphi \Delta \psi+2 \operatorname{grad} \varphi \cdot \operatorname{grad} \psi . \\
+~\\
+
+& \text { 积分公式 } \\
+& \int_V \operatorname{grad} \varphi \mathrm{d} V=\int_S \boldsymbol{n} \varphi \mathrm{d} S . \\
+& \int_V \operatorname{div} \boldsymbol{a} \mathrm{d} V=\int_S \boldsymbol{n} \cdot \boldsymbol{a} \mathrm{d} S(\text { 此式即奥-高定理 }) . \\
+& \int_V \operatorname{rot} \boldsymbol{a} \mathrm{d} V=\int_S \boldsymbol{n} \times \boldsymbol{a} \mathrm{d} S . \\
+& \int_V(\boldsymbol{v} \cdot \nabla) \boldsymbol{a} \mathrm{d} V=\int_S(\boldsymbol{v} \cdot \boldsymbol{n}) \boldsymbol{a} \mathrm{d} S, \text { 其中v 是常矢量. } \\
+& \int_V \Delta \varphi \mathrm{d} V=\int_S \frac{\partial \varphi}{\partial n} \mathrm{~d} S=\int_S \boldsymbol{n} \cdot \nabla \varphi \mathrm{d} S . \\
+& \int_V \Delta \boldsymbol{a} \mathrm{d} V=\int_S \frac{\partial \boldsymbol{a}}{\partial n} \mathrm{~d} S=\int_S(\boldsymbol{n} \cdot \nabla) \boldsymbol{a} \mathrm{d} S .
+\end{aligned}
+$$
+
+格林第一公式
+$$
+\begin{aligned}
+& \int_V(\varphi \Delta \psi+\operatorname{grad} \varphi \cdot \operatorname{grad} \psi) \mathrm{d} V=\int_S \varphi \frac{\partial \psi}{\partial n} \mathrm{~d} S \\
+& \int_V(\psi \Delta \varphi+\operatorname{grad} \psi \cdot \operatorname{grad} \varphi) \mathrm{d} V=\int_S \psi \frac{\partial \varphi}{\partial n} \mathrm{~d} S
+\end{aligned}
+$$
+格林第二公式
+$$
+\int_V(\varphi \Delta \psi-\psi \Delta \varphi) d V=\int_S\left(\varphi \frac{\partial \psi}{\partial n}-\psi \frac{\partial \varphi}{\partial n}\right) d S \text {. }\\~\\
+$$
+$$\int_V(\operatorname{grad} \varphi)^2 \mathrm{~d} V=\int_S \varphi \frac{\partial \varphi}{\partial n} \mathrm{~d} S$$
+
+其中 $\varphi$ 满足 $\Delta \varphi=0$.
+式中 $V$ 是单连通风域.
+
+---
+
+
 物理量独立于坐标系, 在不同坐标系的数量表征之间有确定的变换律.
 
 例如在每个坐标系给出 $3^n$ 个数 $p_{j_1j_2\dotsc j_n}$, 当坐标变换时满足:
