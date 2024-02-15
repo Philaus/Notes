@@ -60,8 +60,30 @@ $$
 
 ## <font color='red'>$\S 3$  </font>能量方程
 
+能量守恒定律
+$$
+\frac{d}{dt}\int\rho (U+\frac{V^2}{2})d\tau=\int \rho\boldsymbol{F}\cdot\boldsymbol{v}d\tau+\int \boldsymbol{p}_n\cdot\boldsymbol{v}dS+\int k\frac{\partial T}{\partial n}dS+\int \rho q d\tau\\
+~\\
+\rho\frac{d\frac{V^2}{2}}{dt}+\rho\frac{dU}{dt}=\rho\boldsymbol{F}\cdot\boldsymbol{v}+\mathrm{div}(\boldsymbol{P}\cdot\boldsymbol{v})+\mathrm{div}(k~\mathrm{grad}~T)+\rho q 
+$$
+
+把 $\mathrm{div}(\boldsymbol{P}\cdot\boldsymbol{v})$ 用张量指标展开, 速度外导数写成变形速度
+$$
+\mathrm{div}(\boldsymbol{P}\cdot\boldsymbol{v})=\boldsymbol{v}\cdot\mathrm{div}\boldsymbol{P}+\boldsymbol{P}:\boldsymbol{S}
+$$
+这样表明面力对单位体积做功功率来自面力合力的功率和流体变形后面力的功率
+
+动能 内能变化来源分离表示:
+$$
+\rho\frac{d\frac{V^2}{2}}{dt}=\rho\boldsymbol{F}\cdot\boldsymbol{v}+\boldsymbol{v}\cdot\mathrm{div}\boldsymbol{P}\\
+~\\
+\rho\frac{dU}{dt}=\boldsymbol{P}:\boldsymbol{S}+\mathrm{div}(k~\mathrm{grad}~T)+\rho q 
+$$
 
 ## <font color='red'>$\S 4$  </font>本构方程
+
+
+本构方程与运动方程联立得到纳维-斯托克斯 (Navier-Stokes) 方程
 
 
 ## <font color='red'>$\S 5$  </font>状态方程
