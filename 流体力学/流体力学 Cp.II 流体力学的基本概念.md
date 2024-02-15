@@ -83,6 +83,10 @@ $$
 
 反对称部分对应着矢量 $\boldsymbol{\omega}=\frac{1}{2}\nabla\times\boldsymbol{v}$
 
+$$
+v_i=v_{0i}+(s_{ij}-\epsilon_{ijk}\omega_{k})\delta x_j
+$$
+
 **亥姆霍兹速度分解定理:**
 $$
 \boldsymbol{v}=\boldsymbol{v}_0+\frac{1}{2}\mathrm{rot}\boldsymbol{v}\times\delta \boldsymbol{r}+S\cdot\delta \boldsymbol{r}=\boldsymbol{v}_0+\frac{1}{2}\mathrm{rot}\boldsymbol{v}\times\delta \boldsymbol{r}+\mathrm{grad}\phi\\

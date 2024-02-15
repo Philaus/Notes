@@ -5,7 +5,7 @@
 $$
 \begin{aligned}
 
-& \text { 微分公式 } \\
+ \text { 微分公式 } \\
 & \operatorname{grad}(\varphi+\psi)=\operatorname{grad} \varphi+\operatorname{grad} \psi \\
 & \operatorname{grad}(\varphi \psi)=\varphi \operatorname{grad} \psi+\psi \operatorname{grad} \varphi \\
 & \operatorname{grad} F(\varphi)=F^{\prime}(\varphi) \operatorname{grad} \varphi, \operatorname{grad} \varphi(r)=\varphi^{\prime}(r) \frac{r}{r} \\
@@ -26,7 +26,7 @@ $$
 & \Delta(\varphi \psi)=\psi \Delta \varphi+\varphi \Delta \psi+2 \operatorname{grad} \varphi \cdot \operatorname{grad} \psi . \\
 ~\\
 
-& \text { 积分公式 } \\
+ \text { 积分公式 } \\
 & \int_V \operatorname{grad} \varphi \mathrm{d} V=\int_S \boldsymbol{n} \varphi \mathrm{d} S . \\
 & \int_V \operatorname{div} \boldsymbol{a} \mathrm{d} V=\int_S \boldsymbol{n} \cdot \boldsymbol{a} \mathrm{d} S(\text { 此式即奥-高定理 }) . \\
 & \int_V \operatorname{rot} \boldsymbol{a} \mathrm{d} V=\int_S \boldsymbol{n} \times \boldsymbol{a} \mathrm{d} S . \\
