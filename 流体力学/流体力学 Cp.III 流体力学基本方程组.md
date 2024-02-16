@@ -79,6 +79,7 @@ $$
 ~\\
 \rho\frac{dU}{dt}=\boldsymbol{P}:\boldsymbol{S}+\mathrm{div}(k~\mathrm{grad}~T)+\rho q 
 $$
+第一个方程就是运动方程两边点乘速度, 所以在总方程组中可以不写.
 
 ## <font color='red'>$\S 4$  </font>本构方程
 
