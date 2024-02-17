@@ -135,7 +135,121 @@ p_{ij}=-p\delta_{ij}+2\mu(s_{ij}-s_{kk}\delta_{ij}/3)\\
 \boldsymbol{P}=-p\boldsymbol{I}+2\mu(\boldsymbol{S}-1/3~\boldsymbol{I}\mathrm{div}\boldsymbol{v})
 $$
 
-本构方程与运动方程联立得到纳维-斯托克斯 (Navier-Stokes) 方程
+本构方程与运动方程联立得到纳维-斯托克斯 (Navier-Stokes) 方程.
+
+根据理想流体的定义, 切向应力的分量全为零, 推出剪切变形速度或者第一动力黏度为 0, 而切变速度一般不为零, 所以理想流体的数学表示是 $\mu=0$.
 
 ## <font color='red'>$\S 5$  </font>状态方程
 
+流体力学的方程组出现了 p T 等物理量, 为了建立封闭方程组, 应该引入热力学方程.
+
+在流体力学中, 对应着热力学中理想气体的称呼为完全气体 (与理想流体区分).
+
+范德华 (van der Waals) 方程:
+$$
+(p+\frac{\alpha}{V^2})(V-\beta)=RT
+$$
+对于极高压强的液体, 应当考虑密度随压强的变化, 柯尔 (Cole) 方程: 
+$$
+\frac{p+B}{1+B}=(\frac{\rho}{\rho_0})^n
+$$
+参数取值例: $n=7$, $B=3000$atm, $p<10^5$atm
+
+如果流体在运动中密度只是压强的函数而和其他热力学变量无关, 则称为正压流体, 否则称为斜压流体.
+
+热力学基本定律和物理量及热容关系不详细叙述, 参看热学.
+
+虽然流体力学系统大多是非平衡非均匀系统, 但是实践表明可以近似使用平衡态的结果.
+
+## <font color='red'>$\S 6$  </font>流体力学基本方程组
+
+**应力形式**
+$$
+\begin{aligned}
+& \begin{cases}
+\displaystyle\frac{\partial \rho}{\partial t}+\operatorname{div}(\rho \boldsymbol{v})=0, & \text { 连续性方程 } \\
+~\\
+\displaystyle\rho \frac{\mathrm{d} \boldsymbol{v}}{\mathrm{d} t}=\rho \boldsymbol{F}+\operatorname{div} \boldsymbol{P}, & \text { 运动方程 } \\
+~\\
+\displaystyle\rho \frac{\mathrm{d} U}{\mathrm{~d} t}=\boldsymbol{P}: \boldsymbol{S}+\operatorname{div}(k~ \operatorname{grad} T)+\rho q, & \text { 能量方程 } \\
+\displaystyle\boldsymbol{P}=-p \boldsymbol{I}+2 \mu\left(\boldsymbol{S}-\frac{1}{3} \boldsymbol{I} \operatorname{div} \boldsymbol{v}\right)+\mu^{\prime} \boldsymbol{I} \operatorname{div} \boldsymbol{v}, & \text { 本构方程 } \\
+\displaystyle p=f(\rho, T), & \text { 状态方程 }\end{cases} \\
+\end{aligned}
+$$
+如果在界面上特征量存在突变或一阶偏导数不连续, 则不能在间断面上使用微分形式, 前三个方程应该写为积分形式
+$$
+\left\{\begin{array}{l}
+\displaystyle \int_\tau \frac{\partial \rho}{\partial t} \mathrm{~d} \tau+\int_S \rho v_n \mathrm{~d} S=0, \\
+~\\
+\displaystyle \int_\tau \frac{\partial(\rho \boldsymbol{v})}{\partial t} \mathrm{~d} \tau+\int_S \rho v_n \boldsymbol{v} \mathrm{d} S=\int_\tau \rho \boldsymbol{F} \mathrm{d} \tau+\int_S \boldsymbol{p}_n \mathrm{~d} S, \\
+~\\
+\displaystyle \int_\tau \frac{\partial}{\partial t}\left[\rho\left(U+\frac{V^2}{2}\right)\right] \mathrm{d} \tau+\int_S \rho v_n\left(U+\frac{V^2}{2}\right) \mathrm{d} S \\
+\displaystyle \quad=\int_\tau \rho \boldsymbol{F} \cdot \boldsymbol{v} \mathrm{d} \tau+\int_S \boldsymbol{p}_n \cdot \boldsymbol{v} \mathrm{d} S+\int_S k \frac{\partial T}{\partial n} \mathrm{~d} S+\int_\tau \rho q \mathrm{~d} \tau, \\
+~\\
+\displaystyle \int_\tau\left[r \times \frac{\partial(\rho \boldsymbol{v})}{\partial t}\right] \mathrm{d} \tau+\int_S\left(\boldsymbol{r} \times \rho v_n \boldsymbol{v}\right) \mathrm{d} S \\
+\displaystyle \quad=\int_\tau \boldsymbol{r} \times \rho \boldsymbol{F} \mathrm{d} \tau+\int_S \boldsymbol{r} \times \boldsymbol{p}_n \mathrm{~d} S,
+\end{array}\right.
+$$
+
+**矢量形式**
+应力做功的功率分为三个部分: 体积变化时应力做的功, 膨胀时黏性耗散的机械能, 剪切黏性耗散的机械能.
+$$
+\boldsymbol{P}: \boldsymbol{S}=-p\operatorname{div} \boldsymbol{v}+\mu^{\prime}(\operatorname{div} \boldsymbol{v})^2+(2 \mu \boldsymbol{S}: \boldsymbol{S}-\frac{2}{3} \mu(\operatorname{div} \boldsymbol{v})^2)
+$$
+只考虑黏性耗散的机械能, 定义耗散函数:
+$$
+\begin{aligned}
+\Phi=\left(\mu^{\prime}-\frac{2}{3} \mu\right)(\operatorname{div} \boldsymbol{v})^2+2 \mu \boldsymbol{S}: \boldsymbol{S}\\
+\end{aligned}
+$$
+
+利用本构方程将运动方程和能量方程中的应力张量消去, 可以重写这两个方程, 其中为了区分变形速度 S ,用 s 表示熵:
+$$
+\left\{\begin{array}{l}
+\displaystyle\rho \frac{\mathrm{d} \boldsymbol{v}}{\mathrm{d} t}=\rho \boldsymbol{F}-\operatorname{grad} p+2 \operatorname{div}(\mu \boldsymbol{S})-\frac{2}{3} \operatorname{grad}(\mu \operatorname{div} \boldsymbol{v})+\operatorname{grad}\left(\mu^{\prime} \operatorname{div} \boldsymbol{v}\right)\\
+\displaystyle(当\mu ~\mu'为常数)= \rho \boldsymbol{F}-\operatorname{grad} p+\mu \Delta \boldsymbol{v}+\left(\mu^{\prime}+\frac{\mu}{3}\right) \operatorname{grad} \operatorname{div} \boldsymbol{v}, \\
+\displaystyle\rho T \frac{\mathrm{d} s}{\mathrm{~d} t}=\Phi+\operatorname{div}(k \operatorname{grad} T)+\rho q, \\
+\end{array}\right.
+$$
+其中第一式称为纳维-斯托克斯 (Navier-Stokes) 方程.
+
+**黏性不可压缩流体**
+
+流体是不可压缩均质时状态方程为 $\rho=$ 常数, 其次设 $\mu=$ 常数, 于是黏性不可压缩均质流体的基本方程组为
+$$
+\left\{\begin{array}{l}
+\operatorname{div} \boldsymbol{v}=0, \\
+\displaystyle\rho \frac{\mathrm{d} \boldsymbol{v}}{\mathrm{d} t}=\rho \boldsymbol{F}-\operatorname{grad} p+\mu \Delta \boldsymbol{v}, \\
+\displaystyle\rho T \frac{\mathrm{d} s}{\mathrm{~d} t}=\Phi+\operatorname{div}(k \operatorname{grad} T)+\rho q, \\
+\boldsymbol{P}=-p \boldsymbol{I}+2 \mu \boldsymbol{S} .
+\end{array}\right.
+$$
+**理想可压缩流体**
+设气体是理想绝热而且是完全的, 此时基本方程组为
+$$
+\left\{\begin{array}{l}
+\displaystyle\frac{\partial \rho}{\partial t}+\operatorname{div}(\rho \boldsymbol{v})=0, \\
+\displaystyle\rho \frac{\mathrm{d} \boldsymbol{v}}{\mathrm{d} t}=\rho \boldsymbol{F}-\operatorname{grad} p, \\
+\displaystyle\frac{\mathrm{d}}{\mathrm{d} t}\left(\frac{p}{\rho^\gamma}\right)=0 ~~理想绝热.
+\end{array}\right.
+$$
+**理想不可压缩流体情形**
+
+如果流体既是理想又是不可压缩均质的, 则方程组采取如下形式:
+$$
+\left\{\begin{array}{l}
+\operatorname{div} \boldsymbol{v}=0, \\
+\displaystyle\rho \frac{\mathrm{d} \boldsymbol{v}}{\mathrm{d} t}=\rho \boldsymbol{F}-\operatorname{grad} p .
+\end{array}\right.
+$$
+
+---
+一般情况下, 两介质界面处的速度矢量和温度是连续的, 如果忽略输运(理想流体), 那么也可以是间断的.
+
+应力的边界条件
+$$
+\boldsymbol{P}^{(1)}\cdot\boldsymbol{n}-\boldsymbol{P}^{(2)}\cdot\boldsymbol{n}=-\gamma(\frac{1}{R_1}+\frac{1}{R_2})\boldsymbol{n}
+$$
+
+对于固定边界处, 采用粘附条件, 即 $\boldsymbol{v}_1=\boldsymbol{v}_2, T_1=T_2, (k\frac{\partial T}{\partial n})_1=(k\frac{\partial T}{\partial n})_2$.
+如果气体很稀薄, 那么滑移速度与分子平均自由程同数量级.
