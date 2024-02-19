@@ -89,7 +89,10 @@ $$
 
 **亥姆霍兹速度分解定理:**
 $$
-\boldsymbol{v}=\boldsymbol{v}_0+\frac{1}{2}\mathrm{rot}\boldsymbol{v}\times\delta \boldsymbol{r}+S\cdot\delta \boldsymbol{r}=\boldsymbol{v}_0+\frac{1}{2}\mathrm{rot}\boldsymbol{v}\times\delta \boldsymbol{r}+\mathrm{grad}\phi\\
+\begin{aligned}
+    \boldsymbol{v}&=\boldsymbol{v}_0+\frac{1}{2}\mathrm{rot}\boldsymbol{v}\times\delta \boldsymbol{r}+S\cdot\delta \boldsymbol{r}=v_{i0}+\frac{1}{2}\epsilon_{ijk}\Omega_{j}x_{k}+s_{im}x_m\\
+    &=\boldsymbol{v}_0+\frac{1}{2}\mathrm{rot}\boldsymbol{v}\times\delta \boldsymbol{r}+\mathrm{grad}\phi\\
+\end{aligned}\\
 \phi=\frac{1}{2}(\epsilon_1\delta x^2+\epsilon_2\delta y^2+\epsilon_3\delta z^2+\theta_1\delta y\delta z+\theta_2\delta x\delta z+\theta_3\delta y\delta x)
 $$
 
