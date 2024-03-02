@@ -217,7 +217,7 @@ $$
 ## <font color='red'>$\S 6$  </font>举例
 ###旋转曲面
 
-对于旋转曲面$\boldsymbol{r}(u,v)=(f(u)cos\ v,f(u)sin\ v,g(u))$(f>0)
+对于旋转曲面 $\boldsymbol{r}(u,v)=(f(u)cos\ v,f(u)sin\ v,g(u))$(f>0)
 
 则直接计算可得:
 $$
@@ -231,7 +231,7 @@ k_1=\displaystyle\frac{f'g''-f''g'}{(f'^2+g'^2)^{3/2}}\\
 k_2=\displaystyle\frac{g'}{f\sqrt{f'^2+g'^2}}\\
 \end{gather}
 $$
-如果选取u为xz平面上曲线$(f(u),g(u))$的弧长参数,则$f'^2+g'^2=1$,这时:
+如果选取 u 为 xz 平面上曲线 $(f(u),g(u))$ 的弧长参数,则 $f'^2+g'^2=1$, 这时:
 $$
 \begin{gather}
 K=-f''/f,H=1/2[g'/f-f''/g']\\
@@ -240,64 +240,64 @@ k_1=-f''/g',k_2=g'/f
 $$
 
 ---
-###常Gauss曲率旋转曲面
+###常 Gauss 曲率旋转曲面
 1. $K=c^2>0$
-   半径为c的球面
+   半径为 c 的球面
 2. $K=0$
    $f=Au+b,g=\pm\sqrt{1-A^2}u+C$,$0\le A\le 1$
-   A=0为圆柱面,A=1为平面,其他为圆锥面
+   A=0 为圆柱面, A=1 为平面, 其他为圆锥面
 3. $K=-c^2<0$
    $$
    f=Acosh\ cu+Bsinh\ cu\\
    g=\pm\displaystyle\int\sqrt{1-c^2(Acosh\ cu+Bsinh\ cu)^2}du
    $$
-   特别的,当
+   特别的, 当
    $$
    f=\displaystyle\frac{1}{c}e^{-cu}\\
    g=\pm\displaystyle\int^u_0\sqrt{1-e^{-2ct}}dt
    $$
-   时,曲面为伪球面
+   时, 曲面为伪球面
 
 ---
 ###常平均曲率旋转曲面
-1. H=0,这样的曲面称为极小曲面
+1. H=0, 这样的曲面称为极小曲面
    $$
    f=\sqrt{u^2+2Au+B}\\
    g=\pm \sqrt{\displaystyle\frac{B-A^2}{u^2+2Au+B}}
    $$
-   当$A=0,B=a^2$时,xz的方程消去u,得到$x=acosh\frac{z}{a}$,这恰好是一条悬链线,这样的旋转曲面是悬链面
-2. H不为零时
+   当 $A=0,B=a^2$ 时, xz 的方程消去 u,得到 $x=acosh\frac{z}{a}$, 这恰好是一条悬链线, 这样的旋转曲面是悬链面
+2. H 不为零时
    $$
    f=\displaystyle\frac{1}{2H}\sqrt{1+B^2+2Bsin2Hu}\\
    \ \\
    g=\displaystyle\int ^u_0\frac{1+2Bsin2Ht}{dt\sqrt{1+B^2+2Bsin2Ht}}dt
    $$
-   旋转常平均曲率曲面又称Delaunay曲面
+   旋转常平均曲率曲面又称 Delaunay 曲面
 
 ---
 ###直纹面
-直纹面是由单参数曲线族构成的曲面,参数表达式为:
+直纹面是由单参数曲线族构成的曲面, 参数表达式为:
 $$
 \boldsymbol{r}(u,v)=\boldsymbol{a}(u)+v\boldsymbol{b}(u)
 $$
-其中$\boldsymbol{a}(u)$是一条空间曲线,$\boldsymbol{b}(u)$是随u变化的一个方向,固定u时,$\boldsymbol{a}(u)+v\boldsymbol{b}(u)$是过点$\boldsymbol{a}(u)$沿方向$\boldsymbol{b}(u)$的一条直线
+其中 $\boldsymbol{a}(u)$ 是一条空间曲线, $\boldsymbol{b}(u)$ 是随 u 变化的一个方向,固定 u 时,$\boldsymbol{a}(u)+v\boldsymbol{b}(u)$ 是过点 $\boldsymbol{a}(u)$ 沿方向 $\boldsymbol{b}(u)$ 的一条直线
 
-直纹面的Gauss曲率不大于零
+直纹面的 Gauss 曲率不大于零
 
 ---
 ###可展曲面
-Gauss曲率恒为零的直纹面称为可展曲面
+Gauss 曲率恒为零的直纹面称为可展曲面
 
 直纹面是可展曲面当且仅当:
 1. $(\boldsymbol{a}',\boldsymbol{b},\boldsymbol{b}')=0$
-2. 沿着直母线,直纹面的法向量不变,即$\boldsymbol{n}(u,v_1)=\boldsymbol{n}(u,v_2)$
+2. 沿着直母线, 直纹面的法向量不变, 即 $\boldsymbol{n}(u,v_1)=\boldsymbol{n}(u,v_2)$
 
-当a为常值,可展曲面是以a为顶点的锥面,所有母线过定点
-当b与u无关,是柱面,这时直母线均平行
-$\boldsymbol{r}(t)$是空间一条正则曲线,则它的切线全体构成一张曲面$\boldsymbol{r}(v,t)=\boldsymbol{r}(t)+v\boldsymbol{r}'(t)$,称为切线面
+当 a 为常值, 可展曲面是以 a 为顶点的锥面 ,所有母线过定点
+当 b 与 u 无关, 是柱面, 这时直母线均平行
+$\boldsymbol{r}(t)$ 是空间一条正则曲线, 则它的切线全体构成一张曲面 $\boldsymbol{r}(v,t)=\boldsymbol{r}(t)+v\boldsymbol{r}'(t)$, 称为切线面
 
 ---
 ###全脐点曲面
-曲面的每一个点都是脐点,称为全脐点曲面,当且仅当:
-1. 曲面的两个基本形式满足$II=kI$,$k$是曲面上的函数
+曲面的每一个点都是脐点, 称为全脐点曲面, 当且仅当:
+1. 曲面的两个基本形式满足 $II=kI$,$k$ 是曲面上的函数
 2. 曲面是平面或球面
