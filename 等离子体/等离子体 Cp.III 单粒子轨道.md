@@ -7,9 +7,9 @@ $$
 u''+i\omega u'=0
 $$
 
-定义电子和粒子回旋频率 $\omega_{ce}=eB/m_e$ 和 $\omega_{ie}=ZeB/m_i$
+定义电子和离子回旋频率 $\omega_{ce}=eB/m_e$ 和 $\omega_{ie}=ZeB/m_i$
 
-定义电子和粒子回旋半径 $r_{ce}=v_{\bot}/\omega_{ce}$ 和 $r_{ie}=v_{\bot}/\omega_{ie}$
+定义电子和离子回旋半径 $r_{ce}=v_{\bot}/\omega_{ce}$ 和 $r_{ie}=v_{\bot}/\omega_{ie}$
 
 回旋运动会产生电流, 产生磁矩, 表示为:
 $$
@@ -50,6 +50,9 @@ $$
 v^{(1)}_{\bot}=\frac{E\times B}{B^2}+\frac{q}{mB^2}\frac{dE}{dt}
 $$
 第一项就是电场引起的漂移, 第二项是电场随时间的变化引起的漂移
+$$
+v^{(12)}_{\bot }=\frac{E'}{\omega_c B}
+$$
 
 ---
 
