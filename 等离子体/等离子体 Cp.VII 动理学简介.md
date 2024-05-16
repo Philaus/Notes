@@ -23,7 +23,7 @@ d\boldsymbol{r}'d\boldsymbol{v}'=\frac{\partial (\boldsymbol{r}',\boldsymbol{v}'
 $$
 泰勒展开并保留到线性项, 得到**玻尔兹曼方程**, 也就是动理学方程:
 $$
-\frac{\partial f}{\partial t}+\boldsymbol{v}\cdot\frac{\partial f}{\partial \boldsymbol{r}}+\frac{\boldsymbol{F}}{m}\cdot\frac{\partial f}{\partial \boldsymbol{v}}=(\frac{\partial f}{\partial t})_c 
+\frac{\partial f}{\partial t}+\boldsymbol{v}\cdot\frac{\partial f}{\partial \boldsymbol{r}}+\frac{\boldsymbol{F}}{m}\cdot\frac{\partial f}{\partial \boldsymbol{v}}=(\frac{\partial f}{\partial t})_c (随体导数)
 $$
 
 ##<font color='red'>$\S 2$ </font>BGK 方程
