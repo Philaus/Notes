@@ -81,6 +81,9 @@ $$
 $$
 第一个方程就是运动方程两边点乘速度, 所以在总方程组中可以不写.
 
+如果考虑传导电流和电磁场对磁流体能量的影响, 应当再加入一项 $\boldsymbol{J}\cdot\boldsymbol{E}=\boldsymbol{v}\cdot\boldsymbol{F_{em}}+J_{cond}^2/2$, 第一项是对机械能的影响, 第二项是对内能.
+其中 $\boldsymbol{F_{em}}=\rho_e \boldsymbol{E}+\boldsymbol{J}_{cond}\times\boldsymbol{B}$, $\boldsymbol{J}_{cond}=\sigma(\boldsymbol{E}+\boldsymbol{v}\times\boldsymbol{B})=\boldsymbol{J}-\rho_e \boldsymbol{v}$
+
 ## <font color='red'>$\S 4$  </font>本构方程
 
 **牛顿黏性定律**
