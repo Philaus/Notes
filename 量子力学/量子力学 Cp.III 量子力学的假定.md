@@ -83,7 +83,7 @@ $$
 
 ## <font color='red'>$\S 3$  </font>薛定谔方程的物理意义
 
-###概率流
+### 概率流
 
 由哈密顿算符的厄米性，态矢量的模方与时间无关
 展开 $\displaystyle\frac{d}{dt}\langle\psi(t)|\psi(t)\rangle$，带入薛定谔方程并利用 $H^{\dag}=H$
